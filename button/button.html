@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+      integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h3>あいうえお</h3>
+    <h2>１</h2>
+    <h2>２</h2>
+    <h2>３</h2>
+    <h2>４</h2>
+    <h2>５</h2>
+    <h2>６</h2>
+    <h2>７</h2>
+    <h2>８</h2>
+    <h2>９</h2>
+    <h2>10</h2>
+    <h2>11</h2>
+    <h2>12</h2>
+    <h2>13</h2>
+    <h2>14</h2>
+    <h2>15</h2>
+    <h2>16</h2>
+    <h2>17</h2>
+    <h2>18</h2>
+    <h2>19</h2>
+    <h2>20</h2>
+    <h2>１</h2>
+    <h2>２</h2>
+    <h2>３</h2>
+    <h2>４</h2>
+    <h2>５</h2>
+    <h2>６</h2>
+    <h2>７</h2>
+    <h2>８</h2>
+    <h2>９</h2>
+    <h2>10</h2>
+    <h2>11</h2>
+    <h2>12</h2>
+    <h2>13</h2>
+    <h2>14</h2>
+    <h2>15</h2>
+    <h2>16</h2>
+    <h2>17</h2>
+    <h2>18</h2>
+    <h2>19</h2>
+    <h2>20</h2>
+    <a href="#">
+      <!-- <span id="page-top">TOP</span> -->
+      <i class="fa-solid fa-circle-chevron-up fa-4x" id="page-top"></i>
+    </a>
+
+    <style>
+      /* #page-top {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        color: #018cd7;
+      } */
+      #page-top {
+        display: none;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        color:gray;
+        padding: 1rem;
+      }
+      /* #page-top::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        background-color: #333;
+        border-radius: 50%;
+        z-index: -1;
+      } */
+    </style>
+    <script>
+      jQuery(function () {
+        var pagetop = $("#page-top");
+        pagetop.hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            //100pxスクロールしたら表示
+            pagetop.fadeIn();
+          } else {
+            pagetop.fadeOut();
+          }
+        });
+        pagetop.click(function () {
+          $("body,html").animate(
+            {
+              scrollTop: 0,
+            },
+            500
+          ); //0.5秒かけてトップへ移動
+          return false;
+        });
+      });
+      $(document).ready(function () {
+        $("#page-top").hide();
+      });
+    </script>
+  </body>
+</html>
+
+<!-- <style>
+  #page-top {
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+  }
+  #page-top::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: -1;
+  }
+</style> -->
+
+
+

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      $("notion-collection-row-value").each(function (i, elem) {
+        console.log(i);
+      });
+      $("#notion-collection-row-value").html();
+    </script>
+
+    <div class="ImageWrapper">
+      <img
+        class="top"
+        src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe04f19aa-1a37-4c14-84ac-853c5c0d07d1%2F%25E7%2594%25B0%25E5%25B3%25B6.png?table=block&id=fac14473-dc86-4a46-a9cf-bedb5598b160&spaceId=ac08410e-12ce-4080-a0c1-b71695699418&width=2000&userId=7cf1017d-d022-48fa-b4c5-f1865e8b5246&cache=v2"
+      />
+      <img
+        class="low"
+        src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F38cb7907-7f79-4421-9b40-47f422983516%2FTOP%25E3%2583%2587%25E3%2583%25A2%25EF%25BC%25BF%25E3%2582%25B5%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0.jpg?table=block&id=ea1510df-9085-49d2-9d24-0878a8d74b89&spaceId=ac08410e-12ce-4080-a0c1-b71695699418&width=2000&userId=7cf1017d-d022-48fa-b4c5-f1865e8b5246&cache=v2"
+      />
+      <h1>あいうえお</h1>
+    </div>
+    <style>
+      .ImageWrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      .top {
+        opacity: 0;
+        transition: 0.5s;
+        transform: Scale(0.8);
+        width: 80%;
+      }
+      .low {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: 0.5s;
+        position: absolute;
+        right: 50%;
+        bottom: 0%;
+        width: 40%;
+        border-radius: 5%;
+      }
+      h1 {
+        color: pink;
+      }
+    </style>
+
+    <script>
+      setTimeout(function () {
+        $(".top").css("opacity", "1");
+        $(".top").css("transform", "scale(1)");
+      }, 1000);
+      setTimeout(function () {
+        $(".low").css("opacity", "0.95");
+        $(".low").css("transform", "translateY(0px)");
+      }, 1500);
+    </script>
+
+  </body>
+</html>
+
+<div class="notion-adding">
+  <div class="notion-collection-row">
+    <div class="notion-collection-row-body">
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="formula">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7.779 7.063l-3.157 4.224a.49.49 0 00-.072.218.35.35 0 00.346.357h6.242c.476 0 .862.398.862.889v.36c0 .491-.386.889-.862.889H1.862A.876.876 0 011 13.111v-.425a.82.82 0 01.177-.54L4.393 7.8a1.367 1.367 0 00-.006-1.625L1.4 2.194a.822.822 0 01-.18-.544V.89C1.22.398 1.604 0 2.08 0h8.838c.476 0 .861.398.861.889v.36c0 .491-.385.89-.86.89H5.135c-.19 0-.345.159-.345.356a.489.489 0 00.07.216l2.92 3.975c.049.062.063.107.06.188a.246.246 0 01-.062.189z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">ヤトロ歴</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-formula"
+            >8年7ヶ月目</span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="text">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">前職</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-text"
+            ><span>新卒入社</span></span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="select">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7 13A6 6 0 107 1a6 6 0 000 12zM3.751 5.323A.2.2 0 013.909 5h6.182a.2.2 0 01.158.323L7.158 9.297a.2.2 0 01-.316 0L3.751 5.323z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">部署</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-select"
+            ><div class="notion-property-select-item notion-item-red">
+              営業部
+            </div></span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="text">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">得意教科</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-text"
+            ><span>数学・化学・地理</span></span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="text">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">好きな○○</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-text"
+            ><span>お寿司：サーモンとハマチ</span></span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="text">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">座右の銘</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-text"
+            ><span>なるようになる！</span></span
+          >
+        </div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="file">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M5.946 14a4.975 4.975 0 01-3.497-1.415A4.731 4.731 0 011 9.174c0-1.288.515-2.5 1.449-3.41L7.456.986c1.345-1.313 3.722-1.318 5.08.007a3.453 3.453 0 010 4.961L8.03 10.241c-.867.847-2.293.848-3.17-.006a2.158 2.158 0 010-3.102l1.744-1.701 1.272 1.24-1.744 1.701a.43.43 0 000 .621c.23.223.405.223.636 0l4.503-4.288a1.723 1.723 0 00-.007-2.473c-.68-.663-1.864-.663-2.543 0L3.713 7.011a3.006 3.006 0 00-.915 2.163c0 .82.328 1.591.922 2.17 1.19 1.162 3.262 1.162 4.451 0l2.248-2.192 1.272 1.24-2.248 2.193A4.978 4.978 0 015.946 14z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">デモ画像</div>
+        </div>
+        <div class="notion-collection-row-value"></div>
+      </div>
+      <div class="notion-collection-row-property">
+        <div class="notion-collection-column-title" data-type="date">
+          <svg
+            viewBox="0 0 14 14"
+            width="16"
+            class="notion-collection-column-title-icon"
+          >
+            <path
+              d="M10.889 5.5H3.11v1.556h7.778V5.5zm1.555-4.444h-.777V0H10.11v1.056H3.89V0H2.333v1.056h-.777c-.864 0-1.548.7-1.548 1.555L0 12.5c0 .856.692 1.5 1.556 1.5h10.888C13.3 14 14 13.356 14 12.5V2.611c0-.855-.7-1.555-1.556-1.555zm0 11.444H1.556V3.944h10.888V12.5zM8.556 8.611H3.11v1.556h5.445V8.61z"
+            ></path>
+          </svg>
+          <div class="notion-collection-column-title-body">入社日</div>
+        </div>
+        <div class="notion-collection-row-value">
+          <span class="notion-property notion-property-date"
+            ><span class="notion-property-edited-time">2014/4/1</span></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .notion-adding {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .hogehoge2{
+    transition: 3.0s;
+  }
+</style>
+<script>
+  setTimeout(function(){
+    $(".notion-adding").css({
+      opacity:"0.90",
+      transform:"translateY(0px)"})
+  },2000);
+</script>

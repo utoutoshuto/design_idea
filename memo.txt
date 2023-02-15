@@ -1,0 +1,47 @@
+https://mirage-alyssum-1f3.notion.site/YATORO-61ca2e40e8e6463c9ffb9c3f7d4d0b90
+
+<style>
+  .p-footer-bottom__pagetop {
+    display: none;
+  }
+</style>
+<!-- 西村追加部分　アニメーション -->
+<script>
+  jQuery(function () {
+    var a = $("#page_top");
+    a.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        a.fadeIn();
+      } else {
+        a.fadeOut();
+      }
+    });
+    a.click(function () {
+      $("body,html").animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+  });
+</script>
+
+<style>
+  /* 西村追加部分　topに戻るボタンcss */
+</style>
+
+<div class="p-footer-bottom">
+  <div class="p-footer-bottom__copyright">
+    © 2019 Yatoro Electronics Co.,Ltd. All Rights Reserved.
+  </div>
+  <div class="p-footer-bottom__pagetop">
+    <a href="#pagetop">
+      <svg role="img" aria-hidden="true">
+        <use xlink:href="#angle-up"></use>
+      </svg>
+    </a>
+  </div>
+</div>
+<style>
+  .p-footer-bottom__pagetop {
+    display: none;
+  }
+</style>

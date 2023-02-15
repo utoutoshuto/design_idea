@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.css"
+      integrity="sha512-wbWvHguVvzF+YVRdi8jOHFkXFpg7Pabs9NxwNJjEEOjiaEgjoLn6j5+rPzEqIwIroYUMxQTQahy+te87XQStuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.js"
+      integrity="sha512-h+N32BLI3o+U0ykO/oftOeXgYsVSGjqqpl1ZrOIj4WcqRzrGhXhkVZOTP3txLhT9+PioObBAVmqdP9kEu8A4mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper-area">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/1317153_m (1).jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/24542307_m.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/24631103_m.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/TOPデモ＿サポートチーム.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/Y379531195.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <img src="./img/slide/田島.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- ï
+    JS
+ -->
+
+    <script>
+      const mySwiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        watchSlidesProgress: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "bullets",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+          },
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+          },
+        },
+        on: {
+          // イベントを登録する
+          slideChange: (swiper) => {
+            console.log("Slide index changed to: " + (swiper.realIndex + 1));
+          },
+        },
+      });
+    </script>
+    <style>
+      .swiper-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+      :root {
+        --easing: cubic-bezier(0.2, 1, 0.2, 1);
+        --transition: 1.0s var(--easing);
+        --color-base: #f8f8f8;
+        --color-gray: #ddd;
+        --box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
+          -0.8rem -0.8rem 1.2rem #fff;
+        --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.08),
+          -1rem -1rem 1.5rem #fff;
+        --box-shadow-inset: inset 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
+          inset -0.8rem -0.8rem 1.2rem #fff;
+        --box-shadow-dark: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.1),
+          -0.8rem -0.8rem 1.2rem rgba(#fff, 0.2);
+      }
+
+      html {
+        font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック",
+          "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+        font-size: 62.5%;
+        line-height: 1.8;
+        height: 100%;
+        word-break: break-word;
+        color: #333;
+        background-color: var(--color-base);
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      *,
+      *::before,
+      *::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      ::-moz-selection {
+        color: #fff;
+        background: var(--color-theme);
+      }
+
+      ::selection {
+        color: #fff;
+        background: var(--color-theme);
+      }
+
+      main {
+        display: block;
+      }
+
+      .swiper-area {
+        position: relative;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 10rem;
+        height: 100%;
+      }
+
+      .l-section {
+        border-top: 1px solid #eee;
+      }
+      .l-section .swiper-area {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+      }
+
+      [class*="swiper"]:focus {
+        outline: none;
+      }
+
+      .swiper-item {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: grid;
+        place-content: center;
+        width: 6.4rem;
+        height: 6.4rem;
+        cursor: pointer;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
+      }
+      .swiper-button-prev::before,
+      .swiper-button-next::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        border-radius: 50%;
+        -webkit-box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow);
+      }
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        width: 1.2rem;
+        height: 1.2rem;
+        content: "";
+        border: solid var(--color-gray);
+        border-width: 3px 3px 0 0;
+      }
+      .swiper-button-prev::after {
+        margin-left: 0.4rem;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+      .swiper-button-next::after {
+        margin-right: 0.4rem;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swiper-button-disabled {
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .swiper-area {
+        position: relative;
+      }
+      .swiper-pagination {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 1.2rem 0.8rem;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 3.2rem;
+        text-align: center;
+      }
+      .swiper-pagination-bullet {
+        width: 1.6rem;
+        height: 3px;
+        cursor: pointer;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
+        vertical-align: top;
+        background-color: var(--color-gray);
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .swiper-item img {
+        padding-top: 62.5%;
+      }
+      .swiper-item img {
+        height: calc(100% + 16px);
+        -webkit-transform: translateY(-16px);
+        transform: translateY(-16px);
+      }
+
+      @media only screen and (max-width: 1024px) {
+        html {
+          -webkit-text-size-adjust: 100%;
+        }
+        .swiper-area {
+          padding: 0 4rem;
+        }
+        .pc {
+          display: none !important;
+        }
+        .swiper-button-prev::before,
+        .swiper-button-next::before {
+          background-color: rgba(0, 0, 0, 0.3);
+          -webkit-box-shadow: var(--box-shadow-dark);
+          box-shadow: var(--box-shadow-dark);
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          border-color: #fff;
+        }
+        .swiper-button-prev {
+          right: calc(100% - 3.2rem);
+        }
+        .swiper-button-next {
+          left: calc(100% - 3.2rem);
+        }
+      }
+
+      @media only screen and (max-width: 599px) {
+        html {
+          font-size: 50%;
+        }
+        .pc-tab {
+          display: none !important;
+        }
+      }
+
+      @media only screen and (min-width: 1025px) {
+        .tab-sp {
+          display: none !important;
+        }
+        .swiper-button-prev::before,
+        .swiper-button-next::before {
+          -webkit-transition: var(--transition);
+          transition: var(--transition);
+        }
+        .swiper-button-prev:hover::before,
+        .swiper-button-next:hover::before {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+        .swiper {
+          padding-top: 16px;
+        }
+        .swiper-item {
+          transition: var(--transition);
+        }
+        .swiper-item img {
+          transition: var(--transition);
+        }
+        .swiper-item:hover {
+          transform: translateY(-16px);
+        }
+        img:hover {
+          transform: translateY(-16px);
+        }
+        .swiper-scrollbar{
+          display: none;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        .sp {
+          display: none !important;
+        }
+      }
+    </style>
+  </body>
+</html>

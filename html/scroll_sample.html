@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../scss/scroll.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../js/scroll.js"></script>
+  </head>
+  <body>
+    <p>SCROLL</p>
+    <ul class="box">
+      <li class="scroll_up">
+        <img
+          src="https://dl.dropbox.com/s/u7oy8t9i29br79c/20210620.jpg?dl=0"
+          alt=""
+        />
+      </li>
+      <li class="scroll_left">
+        <img
+          src="https://dl.dropbox.com/s/u7oy8t9i29br79c/20210620.jpg?dl=0"
+          alt=""
+        />
+      </li>
+      <li class="scroll_right">
+        <img
+          src="https://dl.dropbox.com/s/u7oy8t9i29br79c/20210620.jpg?dl=0"
+          alt=""
+        />
+      </li>
+      <li class="scroll_left">
+        <img
+          src="../img/logo.svg"
+          alt=""
+        />
+      </li>
+    </ul>
+    <img class="scroll_left"
+    src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F97a7443c-dab9-413a-909f-d78408f7b12e%2F1317153_m.jpg?id=e933b1aa-a6ef-41ea-8e38-c59d54306807&table=block&spaceId=ac08410e-12ce-4080-a0c1-b71695699418&width=2000&userId=7cf1017d-d022-48fa-b4c5-f1865e8b5246&cache=v2" alt="">
+    
+    <style>
+        .show{
+          display:block;
+          transition: 1.0s;
+        }
+        .hide{
+          display: none;
+          transition: 1.0s;
+        }
+        .show.hide{
+            content: "閉じる";
+        }
+        
+        .button{
+            content: "隠す";
+        }
+        </style>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+        
+        $(function() {
+          $("#bgBtn").click(function() {
+            // cssで背景色を切り替え
+            $(".show").toggleClass("hide");
+          });
+        });
+        //-->
+        </script>
+        
+        <div>
+            <h1 class="show">消えたり隠れたり</h1>
+          <input type="button" id="bgBtn" value="トグル">
+        </div>
+
+  </body>
+</html>

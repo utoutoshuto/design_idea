@@ -1,0 +1,21 @@
+/*線を丸くする*/
+.notion-h3:before {
+    background-color:var(--yatoro-blue) ; /* 線色 */
+    border-radius: 5px; /* 線幅の半分 */
+    content: "";
+    display: inline-block;
+    height: 50px; /* 線の長さ */
+    margin-right: 20px; /* 線右の余白 */
+    vertical-align: middle;
+    width: 7px; /* 線幅 */
+}
+
+  function showYatoroReki(year, month) {
+    var today = new Date();
+    var join = new Date(year, month
+    var todayMonth = today.getFullYear() * 12 + today.getMonth();
+    var joinMonth = join.getFullYear() * 12 + join.getMonth(
+    var rekiMonth = todayMonth - joinMonth + 1;   
+    var reki = Math.floor(rekiMonth / 12) + "年" + rekiMonth % 12 + "ヶ月目";
+		return reki;
+}

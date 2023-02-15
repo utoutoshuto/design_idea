@@ -1,0 +1,69 @@
+<style>
+  /*スクロールアニメーション*/
+  .notion-asset-wrapper.leftMove{
+    transition: 1s ease-in-out;
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  .notion-asset-wrapper.rightMove{
+    transition: 1s ease-in-out;
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  .notion-asset-wrapper.bottomMove {
+    transition: 1s ease-in-out;
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  .notion-asset-wrapper.leftAppear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .notion-asset-wrapper.rightAppear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .notion-asset-wrapper.bottomAppear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  $(window).scroll(function () {
+    var scrollAnimationElm = document.querySelectorAll(".notion-asset-wrapper");
+    scrollAnimationElm[1].classList.add("rightMove");
+    console.log(scrollAnimationElm);
+    var scrollAnimationFunc = function () {
+      for (var i = 0; i < scrollAnimationElm.length; i++) {
+        var triggerMargin = 150;
+        if (
+          window.innerHeight >
+          scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
+        ) {
+          switch (i) {
+            case 1:
+            case 2:
+              {
+                scrollAnimationElm[i].classList.add("rightAppear");
+              }
+              break;
+            case 3:
+              {
+                scrollAnimationElm[i].classList.add("bottomAppear");
+              }
+              break;
+            default:
+              {
+                scrollAnimationElm[i].classList.add("leftAppear");
+              }
+              break;
+          }
+        }
+      }
+    };
+    window.addEventListener("load", scrollAnimationFunc);
+    window.addEventListener("scroll", scrollAnimationFunc);
+  });
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <script>
+      $(function sayHello() {
+        $(".item-title").on("click", function () {
+          var src = $(this).children("img").data("src");
+          console.log(src)
+          $(this).children("img").data("src", $(this).children("img").attr("src"));
+          $(this).children("img").attr("src", src);
+          $(this).children("img").nextAll(".hogehoge2").toggle(100);
+        });
+      });
+    </script>
+    <div class="box">
+        <h3 class="item-title" onclick="sayHello()" ><span class="test">ここに質問を入れる</span>
+        
+            <img src="/img/iconmonstr-plus-circle-filled-32.png" data-src="./img/iconmonstr-minus-circle-filled-32.png" class="hogehoge" />
+            <div class="hogehoge2">ここにいろいろ書いておく</div>
+        </h3>
+        <h3 class="item-title"><span class="test">ここに質問を入れる</span>
+        
+            <img src="/img/iconmonstr-plus-circle-filled-32.png" data-src="./img/iconmonstr-minus-circle-filled-32.png" class="hogehoge" />
+            <div class="hogehoge2">ここにいろいろ書いておく</div>
+        </h3>
+        <h3 class="item-title"><span class="test">ここに質問を入れる</span>
+        
+            <img src="/img/iconmonstr-plus-circle-filled-32.png" data-src="./img/iconmonstr-minus-circle-filled-32.png" class="hogehoge" />
+            <div class="hogehoge2">ここにいろいろ書いておく</div>
+        </h3>
+    </div>
+    
+
+    <style>
+        .box{
+            margin: 50px;
+        }
+        img{
+            transition: 3s;
+        }
+        .hogehoge2{
+            display: none;
+            padding: 30px 40px;
+
+        }
+        .test{
+            width: 200%;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .item-title{
+            padding: 30px 60px 30px 30px;
+            transition: 5s;
+            cursor:pointer;
+            position: relative ;
+            border-top:1px solid  ;
+        }
+    </style>
+  </body>
+</html>
