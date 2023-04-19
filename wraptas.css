@@ -1,0 +1,1461 @@
+/*コンテンツ全体に関わる、デフォルト値変更等*/
+
+/*デフォルト色の変更*/
+:root {
+	--yatoro-blue: #6D94A2;
+	--yatoro-yellow: #E4C365;
+	--title-black: #3F4443;
+	--interview-background-color: #F7F7F8;
+	--interview-background-white: #F9F9F9;
+	--allpage-black: #333333;
+	--allpage-gray: #F7F7F7;
+	--allpage-blue: #6D94A2;
+	--allpage-yellow: #E4C365;
+	--position-background-pink: #FFF8FC;
+	--position-text-pink: #D35396;
+	--position-background-green: #EFF2E7;
+	--position-text-green: #759B3E;
+	--position-background-orange: #FFF2E6;
+	--position-text-orange: #BF7321;
+	--position-background-blue: #E9F4F4;
+	--position-text-blue: #6D94A2;
+	--position-text-white: #F9F9F9
+}
+.contents.no-icon {
+	padding-top: 1em;
+}
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 70px;
+}
+body {
+	font-family: "Noto Sans JP";
+}
+.notion-page-icon.emoji {
+	display: none;
+}
+.notion-h1 {
+	text-align: center;
+	font-size: 55px;
+	color: var(--notion-blue);
+	font-family: Outfit;
+	font-weight: 900!important;
+}
+@media screen and (max-width: 640px) {
+	.notion-h1 {
+		font-size: 9vmin;
+	}
+}
+.notion-h1+.notion-text {
+	text-align: center;
+	color: var(--notion-blue);
+	font-size: 3vmin;
+	line-height: 1;
+	margin-bottom: 3%;
+}
+.notion-h2 {
+	text-align: left;
+	font-size: 2.5rem;
+	font-family: Outfit;
+	font-weight: 900;
+}
+#block-561c3b9c859a4838a68fc2555de82108 {
+	padding-left: 40px;
+}
+.notion-h3 {
+	text-align: center;
+}
+/*コンテンツ全体に関わる、デフォルト値変更等*/
+
+
+/*Notionの画像に丸みを持たせる*/
+
+.notion-asset-wrapper img {
+	border-radius: 3px;
+}
+.notion-callout {
+	border: none;
+}
+.notion-hr {
+	box-sizing: border-box;
+}
+#block-013b7aa8944944898d0617ff2389a207, #block-39a22fa292b946f68044b11b661a9f54 {
+	display: block!important;
+	text-align: center;
+	font-size: 20px;
+}
+.notion-page-title-icon {
+	display: none;
+}
+#block-de2a30c0837b42669d3487b64a1f4366 {
+	writing-mode: vertical-rl;
+	padding: 0;
+}
+#block-de2a30c0837b42669d3487b64a1f4366 .notion-callout-text {
+	font-size: 20px;
+}
+* {
+	position: relative;
+}
+#block-9df77a9a618143be8d0e132245509515:hover::after, #block-35491ae68c524ed18b03a72554560b2a:hover::after {
+	transform: translate(-5px, -5px) rotate(45deg);
+}
+#block-9df77a9a618143be8d0e132245509515::after, #block-35491ae68c524ed18b03a72554560b2a::after {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border: 20px solid;
+	transform: rotate(45deg);
+	border-color: transparent transparent transparent #FFF;
+	position: absolute;
+	right: -3%;
+	bottom: -4%;
+	pointer-events: none;
+	transition: .2s ease-out;
+}
+/* Google fontのインポート */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+/*モバイルでギャラリビューを2列表示*/
+
+@media (max-width: 640px) {
+	.notion-gallery-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.notion-collection-card-cover {
+		height: 100px;
+	}
+	/* スマホ用ギャラリービュー */
+	.notion-callout {
+		padding: 0;
+	}
+	#block-3ff7ccecedbb4213aacc0aa601d2f1a9 {
+		padding: 0;
+	}
+}
+/*ヘッダー部分*/
+
+/*ヘッダー部分*/
+
+.header {
+	height: 70px;
+	position: fixed;
+	top: 0;
+}
+/* 採用サイトアイコン */
+
+#header-logo:after {
+	content: "採用サイト";
+	margin-left: 0.5em;
+	color: lightblue;
+	border: 1px solid lightblue;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: screen;
+	letter-spacing: 1px;
+}
+.header__contentsWrapper {
+	padding-right: 0;
+}
+/*スクロール後のヘッダー */
+
+.header-scroll {
+	height: 70px;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+	/*position: fixed;*/
+}
+.header__logoArea {
+	width: 40%;
+}
+.header__link {
+	width: 100%;
+	transition: opacity .3s;
+}
+.header__img {
+	height: auto;
+	width: 65%;
+	padding: 0 0;
+}
+@media screen and (min-width:1201px) {
+	.header__img {
+		width: 20%;
+	}
+	#header-logo:after {
+		font-size: 18px;
+	}
+}
+/*ヘッダーに触れたときに下にラインを出すアニメーション*/
+
+.header__btns {
+	align-items: center;
+}
+.header__btn:nth-child(-n+5) {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	color: black;
+	text-decoration: none;
+}
+.header__btn:nth-child(-n+5)::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1.3px;
+	background-color: black;
+	transform: translate(-100%, 0);
+	transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+	content: "";
+}
+.header__btn:nth-child(-n+5):hover::after {
+	transform: translate(0, 0);
+}
+/* エントリー */
+
+@media screen and (min-width: 641px) {
+	#header-link-5 {
+		transition: opacity .3s;
+		display: block;
+		width: 160px;
+		height: 70px;
+		line-height: 70px;
+		color: #000;
+		text-align: center;
+		background-color: #E4C365;
+		border: none;
+	}
+	#header-link-5:after {
+		content: "";
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-top: 2px solid;
+		border-right: 2px solid;
+		transform: rotate(45deg);
+		margin-left: 10px;
+		padding: 0;
+	}
+}
+/*Notionのページタイトルを非表示にする*/
+
+.title .titleSectionBreadcrumb {
+	display: none;
+}
+/*ヘッダー部分ここまで*/
+
+/*フッターに背景色を追加し、横幅ぴったりにする*/
+
+.container {
+	max-width: 100%;
+	padding: 0;
+}
+.contents {
+	padding: 75px 1em 1em;
+	/*max-width: 800px;*/
+	margin: 0 auto;
+}
+.notion-full-width {
+	/*background:#f7f7f7; 背景文字と重なるためいったん削除*/
+}
+/**/
+
+#block-61ca2e40e8e6463c9ffb9c3f7d4d0b90 {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/*トップページの最大幅を1200pxに固定*/
+
+/*ただし、コードブロックの親クラスに当たる部分が幅100%から変更されないようにそれぞれ指定*/
+
+#block-61ca2e40e8e6463c9ffb9c3f7d4d0b90 .titleSection, .notion-blank, .notion-row, .notion-h1, .notion-text, .notion-collection, .notion-page-link {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0px 1em 0px 1em;
+}
+#block-61ca2e40e8e6463c9ffb9c3f7d4d0b90 .notion-collection-header, .notion-gallery {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	/*padding-right:1em;*/
+	/*padding-left:1em;*/
+	/*padding: 0em 1em 0em 1em;*/
+}
+#block-25f5ed3f45d94aea8daba99737ba867b {
+	max-width: 1200px;
+}
+.footer {
+	background-color: #3f3f3f;
+	/*padding: 1em;*/
+	padding: 0px;
+}
+#block-4562510b854c40e2ab76b35a9526807a {
+	color: #F9F9F9;
+}
+#block-4562510b854c40e2ab76b35a9526807a .notion-column {
+	width: 20%;
+}
+#block-d4d437ab77654ebc97ab685ce8ba2762, #block-05dac138d6cf43959cbb03d87b099880 {
+	text-align: center;
+}
+.footer__contntsWrapper {
+	max-width: 95%;
+	margin: 0 auto;
+}
+/*スクロールアニメーション*/
+
+/*一旦下からのみの出現*/
+
+.notion-asset-wrapper:not(#block-1c2fa405fe7d4cbea36e72cec63ddb93, #block-ad49a44c7e054a0789fb620ac9808502) {
+	transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+	transform: translateY(30px);
+	opacity: 0;
+}
+@media screen and (max-width:640px) {
+	.notion-asset-wrapper:not(#block-1c2fa405fe7d4cbea36e72cec63ddb93, #block-ad49a44c7e054a0789fb620ac9808502) {
+		transform: translateY(0px);
+	}
+	.notion-asset-wrapper {
+		opacity: 1!important;
+	}
+}
+.notion-asset-wrapper a {
+	transition: opacity .3s ease;
+}
+.notion-asset-wrapper.bottomAppear {
+	opacity: 1!important;
+	transform: translateY(0)!important;
+}
+/*レイヤー画像*/
+
+#block-5a36f92c16984bb3b28a23b813278d0f>.notion-callout-text>div {
+	position: relative;
+}
+#block-f0134a30e0ce43f99e36eca689cabf2b {
+	transition-delay: .4s!important;
+}
+#block-88cbf9736e3b47ddad9e15cc9be825c8 {
+	position: relative;
+	z-index: 2;
+	transition-delay: .6s!important;
+}
+#block-6a155aac32774a91bafca57a772d0431, #block-2ebaa9a99b9245dca010e6bc1fa81f9a {
+	transition: 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+#block-6a155aac32774a91bafca57a772d0431 {
+	z-index: 3;
+	transition-delay: 0.3s!important;
+}
+#block-2ebaa9a99b9245dca010e6bc1fa81f9a {}
+/*ギャラリービュー*/
+
+/*ギャラリービューに触れた時の画像拡大*/
+
+.notion-collection-card-cover {
+	transition: .7s ease-in-out;
+}
+.notion-collection-card-cover:hover {
+	transform: scale(1.05, 1.05);
+}
+/*ギャラリービューの表示量制限*/
+
+/*#block-d74da01e70374b68b9418a76d369033d .notion-collection-card:nth-child(n+4).show {*/
+
+/*    display: block;*/
+
+/*    transition: 1.0s;*/
+
+/*}*/
+
+#block-d74da01e70374b68b9418a76d369033d .notion-collection-card:nth-child(n+4) {
+	display: none;
+	transition: 1.0s;
+}
+/*ギャラリービューの表示量制限をするボタン*/
+
+.more {
+	display: none;
+	background: #eee;
+	border-radius: 3px;
+	border-color: #eee;
+	border-width: 0px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 220px;
+	padding: 10px 25px;
+	color: #313131;
+	transition: 0.4s ease-in-out;
+	font-weight: 500;
+}
+.more:hover {
+	opacity: 0.7;
+}
+.interview-more {
+	text-decoration: none;
+}
+/*ボタンのテキストを変更*/
+
+.button-text.show:before {
+	content: "CLOSE";
+}
+.button-text:before {
+	content: 'VIEW MORE';
+}
+.button-icon.show:before {
+	content: "-";
+}
+.button-icon:before {
+	content: "+";
+}
+.button-icon {
+	margin: 0px 0px 4px 5px;
+	font-size: 18px;
+	color: blue;
+}
+.button-icon.show {
+	font-size: 20px;
+}
+#block-61ca2e40e8e6463c9ffb9c3f7d4d0b90 .notion-page-link {
+	display: none;
+}
+/*エントリーボタン*/
+
+#entry-button-id .entry-img {
+	position: fixed;
+	height: auto;
+	bottom: 20px;
+	right: 10px;
+	opacity: 0.75;
+	width: 8em;
+	z-index: 2;
+	transition: .5s;
+	pointer-events: auto;
+	/* アニメーションの名前 */
+	animation-name: Entry-UpDown;
+	/* アニメーションの１回分の長さ */
+	animation-duration: 1.5s;
+	/* アニメーションの回数 */
+	animation-iteration-count: infinite;
+	/* アニメーションの進行具合 */
+	animation-timing-function: ease-in-out;
+	/* アニメーション再生の向き */
+	animation-direction: alternate;
+}
+.entry-button {
+	position: static;
+}
+#entry-button-id .entry-img:hover {
+	opacity: 1.0;
+}
+/*コードブロックのpositionがrelativeになってしまうため修正*/
+
+#block-ca1bc89e98ad43e9b9c413a8c22a10aa {
+	position: static;
+}
+/* アニメーションの設定 */
+
+@keyframes Entry-UpDown {
+	/* 開始地点 */
+	0% {
+		/* Y軸0px */
+		transform: translateY(0);
+	}
+	/* 終了地点 */
+	100% {
+		/* Y軸50px */
+		transform: translateY(15px);
+	}
+}
+.page, .notion-row {
+	overflow: visible;
+}
+/*スマホ向け設定*/
+
+@media only screen and (max-width:640px) {
+	/*    #block-3ff7ccecedbb4213aacc0aa601d2f1a9 .notion-collection-card:nth-child(n+4).show {*/
+	/*    display: block;*/
+	/*    transition: 1.0s;*/
+	/*}*/
+	.page-_top #block-3ff7ccecedbb4213aacc0aa601d2f1a9 .notion-collection-card:nth-child(n+4) {
+		display: none;
+		transition: 1.0s;
+	}
+	/*スマホ版は画像と距離を空ける*/
+	.notion-adding {
+		margin-top: 25%;
+	}
+}
+/*---*/
+
+/*notionフォント設定*/
+
+.notion-text {
+	line-height: 1.7;
+	font-family: "Noto Sans JP";
+	font-size: 18px;
+}
+.notion-h1 {
+	font-family: "Outfit";
+	font-weight: 500;
+	text-align: center;
+}
+.notion-h3 {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 25px;
+}
+/*見出しの中央揃え*/
+
+#block-23a0586e5e324df6b7803235c342e70c {
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 700;
+}
+#block-685a45478adf47d3bcf62b45dae6e817 {
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 700;
+}
+#block-273867258f4a4bb5b69829acbe2b921c {
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 700;
+}
+/*ギャラリービューのレイアウト調整*/
+
+#block-3ff7ccecedbb4213aacc0aa601d2f1a9 .notion-collection-card-property:nth-child(3n) {
+	font-size: 16px;
+	font-weight: bold;
+}
+.notion-property-select-item, .notion-property-multi_select-item {
+	display: flex;
+	align-items: center;
+	padding: 0 6px;
+	border-radius: 3px;
+	height: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 120%;
+	font-size: 10px;
+}
+/*インタビューページ全体*/
+
+/*インタビューの枠を消去*/
+
+.notion-collection-card {
+	box-shadow: 0px 0px 0px;
+}
+/*インタビューページの一番上のタイトルを非表示*/
+
+#block-0628184736e04c329c7d137308e6b105 .titleSection {
+	display: none;
+}
+/*社員インタビューのアイコン消去*/
+
+#block-3ff7ccecedbb4213aacc0aa601d2f1a9 .notion-collection-card-property .notion-page-title-icon {
+	display: none;
+}
+/*タイトルアイコンの非表示*/
+
+#block-eb03b2d60cbb4b33bcec6badbf3f0d50 .notion-page-title-icon {
+	display: none;
+}
+#block-eb03b2d60cbb4b33bcec6badbf3f0d50 .notion-page-title-text {
+	font-size: 18px;
+}
+/*---インタビューページ全体に反映される部分---*/
+
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-collection-card:nth-child(n+4) {
+	display: none;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] {
+	background-color: var(--interview-background-color);
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-collection-row {
+	border: none;
+	padding: 0 10px;
+	background: #FFF;
+	border-radius: 3px;
+	height: 100%;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-collection-row h1 {
+	font-family: Outfit;
+	font-weight: 900;
+	font-size: 3rem;
+	color: var(--notion-blue);
+	padding-left: 5%;
+	padding-top: 10%;
+	margin-bottom: 10%;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-item-red {
+	width: fit-content;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] img {
+	border-radius: 4px;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-h3 {
+	width: fit-content;
+	background-color: #FFF;
+	padding: 8px 20px;
+	margin: 0 0 10px 0;
+	text-align: left;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a"] .notion-collection-row-value {
+	white-space: normal;
+}
+/* インタビューページのレスポンシブレイアウト */
+
+.flexContainerInterview {
+	display: flex;
+	align-items: center;
+}
+.flexContainerInterview>img {
+	width: 100%;
+	height: 100%;
+}
+.flexContainerInterview .notion-collection-column-title-icon {
+	display: none;
+}
+.flexContainerInterview .notion-collection-row {
+	width: 300px;
+	padding: 0;
+}
+.notion-collection-row-body div:nth-child(6), .notion-collection-row-wrapper {
+	display: none;
+}
+.notion-collection-row-wrapper-add {
+	border-radius: 3px;
+	width: 40%;
+	margin: 20px 30px;
+}
+.notion-collection-row-body div:nth-child(6), .notion-collection-row-wrapper {
+	display: none;
+}
+.notion-collection-row-wrapper-add {
+	border-radius: 3px;
+	width: 40%;
+	margin: 20px 30px;
+}
+.notion-collection-row-body div:nth-child(6), .notion-collection-row-wrapper {
+	display: none;
+}
+.notion-collection-row-wrapper-add {
+	border-radius: 3px;
+	width: 40%;
+	margin: 20px 30px;
+}
+/*タイトル、見出しに下線*/
+
+.titleSection>.titleSection__contentsWrapper>.title {
+	border-bottom: solid 3px var(--notion-blue);
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .title {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+/*Another Member部分*/
+
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] h4, .page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-h2 {
+	text-align: center;
+	font-family: "メイリオ", sans-serif;
+	font-weight: 900;
+	background-color: #FFF;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-h2 {
+	font-size: 30px;
+	color: var(--title-black);
+	margin-bottom: 0;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] h4 {
+	color: var(--yatoro-blue);
+	font-size: 24px;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-callout {
+	background-color: #FFF;
+	font-size: 0.8rem;
+	margin: 0 0 40px 0;
+	padding: 8px;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-callout-text {
+	margin-left: 16px;
+}
+/*ボーダー背景パターン*/
+
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .container {
+	background-color: #F9F9F9;
+	background-image: repeating-linear-gradient(to bottom, transparent 25px, rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px, transparent 27px, transparent 51px, rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px, transparent 53px, transparent 77px, rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px, transparent 79px, transparent 103px, rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px, transparent 105px, transparent 129px, rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px), repeating-linear-gradient(to right, transparent 25px, rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px, transparent 27px, transparent 51px, rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px, transparent 53px, transparent 77px, rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px, transparent 79px, transparent 103px, rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px, transparent 105px, transparent 129px, rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px);
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .contents {
+	background-color: var(--allpage-gray);
+	box-shadow: 0 0 2px var(--allpage-black);
+	margin-top: 40px;
+}
+/*画像サイズをカードに合わせる*/
+
+.notion-gallery-grid-size-large {
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-gallery-grid-size-large {
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-property-file>img {
+	object-fit: contain!important;
+}
+.notion-property-file>img {
+	object-fit: cover !important;
+	object-position: center 50%!important;
+}
+.notion-collection-card-cover {
+	height: 240px;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .notion-collection-row-property .notion-collection-column-title {
+	width: 100px;
+	height: fit-content;
+}
+.page[class*="761b19b72e4c42209917a82a1841c51a_"] .contents {
+	max-width: 1000px!important;
+}
+/*インタビューページ全体ここまで*/
+
+/*スマホ画面で検索窓を消去*/
+
+}
+@media screen and (max-width:1200px) {
+	.notion-collection-header {
+		display: none;
+	}
+}
+/*トップ画像のアニメーション*/
+
+.top-img-anim {
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*transition: 0.8s ease-in-out;*/
+	/*transform: translateY(30px);*/
+	z-index: 1;
+}
+.top-img {
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	animation: change-img-anim 14s infinite;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.top-img:nth-of-type(1) {
+	animation-delay: 0s;
+}
+.top-img:nth-of-type(2) {
+	animation-delay: 7s;
+}
+/*スマホ版のトップ画像を非表示*/
+
+@media screen and (min-width:641px) {
+	.top-img-sp {
+		display: none!important;
+		/*styleにdisplay:blockがあるため必須*/
+	}
+}
+@keyframes change-img-anim {
+	0% {
+		opacity: 0;
+	}
+	22% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	63% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+#block-f7b717cb16e4431393691dd6d1564a96 {
+	background: #f7f7f7;
+	padding: 0px;
+	margin-bottom: 0px;
+}
+/*wraptasボタンデザイン*/
+
+/* 箇条書きの部分　Hover時に大きくなる */
+
+.wraptas-button-nocolor::before {
+	position: absolute;
+	display: inline-block;
+	height: 6px;
+	width: 6px;
+	content: "";
+	/*background-color: #333;*/
+	border-radius: 50%;
+	left: 20%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	transition: width 0.35s cubic-bezier(0.87, 0.24, 0.36, 1), height 0.35s cubic-bezier(0.87, 0.24, 0.36, 1);
+	z-index: 1;
+	background: #f8f8f8;
+}
+/* 箇条書きのホバー時の大きさ */
+
+.wraptas-button-nocolor:hover::before {
+	width: 400px;
+	height: 400px;
+	background: #333;
+}
+.wraptas-button-nocolor:not(:hover)::before {
+	transition: width 0.35s, height 0.35s, background 0.5s;
+}
+/*Wraptas-buttonに初期設定でopacityが追加されていた*/
+
+.wraptas-button-nocolor:hover {
+	opacity: 1.0;
+}
+/* 文字のHover */
+
+.wraptas-button-nocolor span:hover {
+	color: white;
+	/*文字色の変化*/
+	z-index: 2;
+	/*背景の上に移動*/
+	transition: 0.2s;
+}
+/* テキストのあたり判定とレイアウト */
+
+.wraptas-button-nocolor span {
+	width: 100%;
+	height: 100%;
+	border-radius: 42px;
+	/*テキストボックスのあたり判定をボタンと同じに*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*中央寄せ*/
+	z-index: 1;
+}
+/*ボタンレイアウト*/
+
+.wraptas-button-nocolor {
+	padding: 0px;
+	align-items: center;
+	background-color: #f8f8f8;
+	border-radius: 42px;
+	display: inline-flex;
+	height: 100%;
+	justify-content: center;
+	-webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+	position: relative;
+	transition: color 0.2s 0.2s;
+	width: 200px;
+	z-index: 1;
+	margin: 0px;
+}
+#block-2a991b365d854d03a4c67655522ff607 .notion-column {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.wraptas-button-wrapper {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+}
+/*数字でわかるヤトロ消去*/
+
+#block-7822438e28ac4aea8b486604aa48d5ac {
+	display: none !important;
+}
+.wraptas-button-blue_background {
+	font-weight: 700;
+	position: relative;
+	display: inline-block;
+	padding: 1rem 0;
+	transition: 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	color: var(--allpage-black);
+	border-radius: 0.5rem;
+	background: linear-gradient(45deg, var(--allpage-gray), #f4f4f4);
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+	/*テキストボックスのあたり判定をボタンと同じに*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*中央寄せ*/
+	z-index: 1;
+	border: solid 2px #333;
+}
+.wraptas-button-blue_background span {
+	width: 100%;
+}
+.wraptas-button-blue_background span::before {
+	clip-path: polygon(40% 20%, 40% 80%, 100% 50%);
+	background-color: #333;
+	bottom: 0;
+	content: "";
+	height: 1em;
+	margin: auto;
+	position: absolute;
+	right: 8px;
+	top: 0;
+	width: 1em;
+}
+/*背景文字*/
+
+#block-cb1cd7191a8d448083d5f419044b356a {
+	position: absolute;
+	background-color: transparent;
+	font-weight: 900;
+	pointer-events: none;
+	width: 100%;
+	height: 200vh;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0px;
+	margin-top: -8%;
+}
+#block-cb1cd7191a8d448083d5f419044b356a>.notion-callout-text>span {
+	position: absolute;
+	left: 10%;
+	line-height: 135%;
+	z-index: 0;
+	display: inline-block;
+	font-size: 160px;
+	color: var(--allpage-gray);
+	transform: rotate(-10deg);
+	width: 100%;
+	font-family: Outfit;
+}
+/* よくあるご質問、制度、福利厚生などへのリンクのボタン アイコン非表示 */
+
+#block-72faa76320c2467c933a720d26ce6d6f .notion-page-title-icon {
+	display: none;
+}
+/* ボタンデザイン */
+
+#block-72faa76320c2467c933a720d26ce6d6f .notion-page-link {
+	width: 250px;
+	height: 50px;
+	font-weight: 700;
+	position: relative;
+	display: inline-block;
+	padding: 12px;
+	transition: 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	color: var(--allpage-black);
+	border-radius: 0.5rem;
+	background: linear-gradient(45deg, var(--allpage-gray), #f4f4f4);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+#block-72faa76320c2467c933a720d26ce6d6f .notion-page-link:hover {
+	opacity: 0.6;
+}
+/*ボタンレイアウト*/
+
+#block-47ab889613a44cc5bbde35ae33fbce4c .notion-spacer {
+	display: none;
+}
+#block-47ab889613a44cc5bbde35ae33fbce4c .notion-column {
+	width: 50%;
+}
+/*ボタンのテキスト*/
+
+#block-72faa76320c2467c933a720d26ce6d6f .notion-page-title-text {
+	font-weight: bold;
+	text-align: start;
+	;
+}
+#block-72faa76320c2467c933a720d26ce6d6f .notion-page-link-titleArea {
+	padding: 0px;
+}
+/* ボタンの配置 */
+
+#block-72faa76320c2467c933a720d26ce6d6f .notion-row {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#block-cdf37bae5d4142ef8014c60196e4be40 .notion-page-link {
+	margin: 12px 0px 12px 0px;
+}
+/*ページアイコンを消去*/
+
+.pageIcon-cover {
+	display: none;
+}
+/*制度・福利厚生*/
+
+/*背景をグレーに変更＋影を表示*/
+
+#block-cfbb90e994714681817dc13e31123918 .notion-column {
+	background-color: #fbfbfb;
+	box-shadow: 5px 5px 5px #f1f1f1;
+}
+#block-50a9c70fe69e42898eedf238a5d1d187 .notion-column {
+	margin: 10px 0px 0px 0px;
+	background-color: #fbfbfb;
+	box-shadow: 5px 5px 5px #f1f1f1;
+}
+/*インタービューページ*/
+
+/*横幅最大1200px*/
+
+#block-38f47a35feb949e2aa0d34ac087228e0 .notion-collection-header, .notion-collection-view-search {
+	display: none;
+}
+#block-38f47a35feb949e2aa0d34ac087228e0 .contents {
+	max-width: 1200px;
+}
+/*About Yatoro*/
+
+#block-7280fa1a888d4e6abe500522d9c9e5ff, #block-1a7aec3925be469badad8aa39a8db23c, #block-274bfce5929645eb858c514c776f4563, #block-6c705ac0768448b6aafe13446f56d800 {
+	text-align: center;
+}
+/*採用責任者メッセージを太文字に*/
+
+#block-48427ffeef234ef4ae9519d8f62cd7c8 .notion-page-title-text {
+	font-weight: bold;
+}
+#block-f7b717cb16e4431393691dd6d1564a96 .notion-page-link-titleArea {
+	padding: 4px 0px 0px 0px;
+}
+/*About position*/
+
+#block-acfb3c25295d4282a922128bc4d0c819 .notion-callout-text {
+	padding: 0px 22px 0px 22px;
+}
+#block-756f03a838e946fd8b288ebec1b9ab4b {
+	text-align: center;
+}
+/*面接・選考*/
+
+#block-962e9627cd924dd78c11ae7dde51fba3 .notion-text {
+	font-size: 14px;
+}
+/*選考フローの画像調整*/
+
+#block-0e253d3eb4af4d35850e64b5f7d0cb0b {
+	max-width: 1200px;
+}
+#block-0e253d3eb4af4d35850e64b5f7d0cb0b .notion-column {
+	width: 25%;
+}
+/*アニメーションディレイ*/
+
+#block-35491ae68c524ed18b03a72554560b2a {
+	transition-delay: 0.4s!important;
+}
+/*フッターバナーの設定*/
+
+#footer-banner {
+	background: #3f3f3f;
+}
+#footer-banner .inner-block {
+	display: flex;
+}
+/* ヤトロロゴ */
+
+#footer-banner .logo {
+	width: 100%;
+}
+/*ヤトロ画像*/
+
+#footer-banner .logo img {
+	width: 65%;
+	height: auto;
+	padding: 0px 15px 0px 15px;
+}
+#footer-banner .adopt-icon {
+	align-items: center;
+	display: flex;
+	width: 100%;
+	text-decoration: none;
+}
+#footer-banner .adopt-text {
+	color: lightblue;
+	border: 1px solid lightblue;
+	border-radius: 20px;
+	padding: 10px 5px;
+	font-size: 28px;
+	white-space: nowrap;
+	overflow: screen;
+	letter-spacing: 2px;
+}
+/* バナー */
+
+#footer-banner .nav li a {
+	/*バナー全体 */
+	color: #ccc;
+}
+#footer-banner .nav-fig {
+	/*バナー画像*/
+	max-width: 60px;
+	height: auto;
+	border-radius: 5px 0px 0px 5px;
+}
+#footer-banner .nav-item1 .nav-item2 .nav-item3 {
+	/*それぞれのバナーの横幅*/
+	width: 20%;
+}
+#footer-banner .nav-item {
+	/*バナー全体のデザイン*/
+	display: flex;
+	align-items: center;
+	background-color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .3s;
+}
+#footer-banner .nav {
+	/*リスト全体のレイアウト*/
+	width: 55%;
+	align-items: center;
+	list-style-type: none;
+	white-space: nowrap;
+}
+#footer-banner .nav-item:hover {
+	/*バナーのアニメーション*/
+	top: -3px;
+	/*影なし*/
+	transform: translate(0, -5px);
+}
+#footer-banner .nav-text {
+	/*バナーのテキスト*/
+	padding: 0px 18px 0px 18px;
+	font-size: 18px;
+	color: #3f3f3f;
+	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", sans-serif;
+	font-weight: bold;
+}
+#block-d4d437ab77654ebc97ab685ce8ba2762, #block-05dac138d6cf43959cbb03d87b099880 {
+	color: #f9f9f9;
+}
+/* PCサイズ */
+
+@media screen and (min-width: 1201px) {
+	/*折り返しの設定*/
+	#footer-banner .wrap {
+		padding: 20px 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	/*ロゴの親クラス*/
+	#footer-banner .logo {
+		padding: 10px 0;
+		width: 40%;
+	}
+	#footer-banner .cont {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	/*バナーの横並び設定*/
+	#footer-banner .nav {
+		display: flex;
+	}
+	#footer-banner .nav li {
+		/*display: inline-block;*/
+		width: 100%;
+	}
+	/*会社情報*/
+	#footer-banner .nav-item1 {
+		margin: 0em 15px 0em 0em;
+		width: 100%;
+	}
+	/*製品情報サイト*/
+	#footer-banner .nav-item2 {
+		margin: 0em 15px 0em 0em;
+		width: 100%;
+	}
+	/*ヤトロブログ*/
+	#footer-banner .nav-item3 {
+		margin: 0em 15px 0em 0em;
+		width: 100%;
+	}
+}
+/* タブレットサイズ */
+
+@media screen and (max-width:1200px) and (min-width:640px) {
+	/*折り返しの設定*/
+	#footer-banner .wrap {
+		padding: 20px 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	/*ロゴ全体のサイズ*/
+	#footer-banner .logo {
+		width: 40%;
+	}
+	/*ロゴの画像*/
+	#footer-banner .logo img {
+		padding: 0px 5px 0px 5px;
+	}
+	/*ロゴの採用サイトの文字*/
+	#footer-banner .adopt-text {
+		font-size: 12px;
+		border-radius: 10px;
+		letter-spacing: 1px;
+		padding: 5px;
+	}
+	/*バナーの親クラス*/
+	#footer-banner .nav {
+		display: flex;
+		width: 70%;
+	}
+	/*会社情報*/
+	#footer-banner .nav-item1 {
+		width: 30%;
+		margin: 0px 15px 0px 0px;
+	}
+	/*製品情報サイト*/
+	#footer-banner .nav-item2 {
+		width: 30%;
+		margin: 0px 15px 0px 0px;
+	}
+	/*ヤトロブログ*/
+	#footer-banner .nav-item3 {
+		width: 30%;
+		margin: 0px 5px 0px 0px;
+	}
+	#footer-banner .nav li {
+		/*display: inline-block;*/
+		width: 100%;
+	}
+	/*バナーの画像*/
+	#footer-banner .nav-fig {
+		width: 30px;
+	}
+	/*バナーのテキスト*/
+	#footer-banner .nav-text {
+		font-size: 12px;
+		padding: 5px 5px 5px 5px;
+	}
+}
+/*スマホ版*/
+
+@media screen and (max-width:640px) {
+	#footer-banner .wrap {
+		width: 100%;
+	}
+	#footer-banner .logo {
+		display: none;
+	}
+	/* #footer-banner .adopt-text{
+    font-size: 24px;
+  } */
+	#footer-banner .nav {
+		width: 70%;
+		margin: 0px 0px 0px 32px;
+	}
+	#footer-banner .nav-item1 {
+		margin: 15px 0px 0px 0px;
+	}
+	#footer-banner .nav-item2 {
+		margin: 15px 0px 0px 0px;
+	}
+	#footer-banner .nav-item3 {
+		margin: 15px 0px 0px 0px;
+	}
+	#footer-banner .nav-fig {
+		width: 20%;
+	}
+	#footer-banner .nav-text {
+		font-size: 18px;
+	}
+}
+.fa-solid.page_id-61ca2e40e8e6463c9ffb9c3f7d4d0b90 {
+	display: none;
+}
+/*背景方眼*/
+
+#block-d74da01e70374b68b9418a76d369033d {
+	margin-top: 0px;
+	padding-top: 0px;
+	background-image: repeating-linear-gradient(to bottom, transparent 25px, rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px, transparent 27px, transparent 51px, rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px, transparent 53px, transparent 77px, rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px, transparent 79px, transparent 103px, rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px, transparent 105px, transparent 129px, rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px), repeating-linear-gradient(to right, transparent 25px, rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px, transparent 27px, transparent 51px, rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px, transparent 53px, transparent 77px, rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px, transparent 79px, transparent 103px, rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px, transparent 105px, transparent 129px, rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px);
+}
+/*検証*/
+
+/*body * { outline: 3px dotted red!important; } */
+
+/*body * * { outline: 3px dotted green !important; } */
+
+/*body * * * { outline: 3px dotted orange!important; } */
+
+/*body * * * * { outline: 3px dotted blue !important; } */
+
+/*body * * * * * { outline: 1px solid rgba(255,0,0,1) !important; } */
+
+/*body * * * * * * { outline: 1px solid rgba(0,128,0,1) !important; } */
+
+/*body * * * * * * * { outline: 1px solid rgba(255,165,0,1) !important; } */
+
+/*body * * * * * * * * { outline: 1px solid rgba(0,0,255,1) !important; }*/
+
+.page_id-61ca2e40e8e6463c9ffb9c3f7d4d0b90 .titleSection {
+	display: none;
+}
+/*ボタン中央配置*/
+
+#block-25f5ed3f45d94aea8daba99737ba867b {
+	max-width: none;
+}
+.notion-page-link {}
+.notion-property-select-item, .notion-property-multi_select-item {
+	font-size: 14px;
+}
+.notion-collection-card-property:first-child {
+	font-size: 14px;
+}
+/*レスポンシブ対応*/
+
+@media screen and (max-width:640px) {
+	/*コンテンツの余白削除*/
+	.contents.no-icon {
+		padding: 0;
+	}
+	/* Topのアニメーションがヘッダーと重ならないように */
+	.top-img-anim {
+		margin-top: 7%;
+	}
+	.top-img-pc {
+		display: none!important;
+	}
+	/*検証用
+    .top-img-sp{
+        display: none!important;
+    }*/
+	/*縦書き文字→横書き*/
+	#block-de2a30c0837b42669d3487b64a1f4366 {
+		writing-mode: horizontal-tb;
+		padding: 0;
+	}
+	/*背景文字の消去*/
+	#block-cb1cd7191a8d448083d5f419044b356a {
+		display: none;
+	}
+	/* Topページ、わたしたちは、、、のセンタリング */
+	#block-f7597226917c4e59ab9082054020919d .notion-text {
+		text-align: center;
+	}
+	/* TOPの質問、面接などのボタンの配置 */
+	#block-cdf37bae5d4142ef8014c60196e4be40 .notion-column {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	/* 社員インタビューの見え方調整 */
+	.notion-property-multi_select {
+		display: none;
+	}
+	.notion-property-formula {
+		font-size: 13px;
+	}
+	.notion-collection-row-wrapper-add {
+		width: fit-content;
+		margin: 0 auto;
+		padding-top: 5%;
+	}
+	.notion-h1+.notion-text {
+		font-size: 1.2rem;
+	}
+	.flexContainerInterview {
+		display: block;
+	}
+	/* インタビューページの絞り込みボタンのレイアウト調整 */
+	#block-2a991b365d854d03a4c67655522ff607 .wraptas-button-wrapper {
+		margin-top: 6px;
+		margin-bottom: 6px;
+	}
+	/*インタビューページの枠*/
+	.notion-collection-card {
+		box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px;
+	}
+	/* 追従するエントリーボタン小さく */
+	#entry-button-id .entry-img {
+		width: 6rem;
+	}
+	/*採用責任者、採用担当メッセージの横幅*/
+	#page_id-39a22fa292b946f68044b11b661a9f54, #block-013b7aa8944944898d0617ff2389a207 {
+		max-width: 95%;
+	}
+	/* tableのスマホ版表示 */
+	.notion-simple-table-column {
+		min-width: auto !important;
+	}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+	.notion-simple-table-table th, .notion-simple-table-table td {
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.notion-simple-table-table {
+		width: 100%;
+	}
+	table.notion-simple-table-table th, table.notion-simple-table-table td {
+		display: block;
+		width: 100%;
+		border-bottom: none;
+	}
+	tbody th {
+		text-align: center !important;
+	}
+	/*フッターの間隔調整*/
+	#block-4562510b854c40e2ab76b35a9526807a .notion-text {
+		padding-top: 6px;
+	}
+	/* TOPページのよりお客さまに~ 改行修正 */
+	#block-de2a30c0837b42669d3487b64a1f4366 .notion-callout-text {
+		margin: 0;
+		font-size: 4.9vmin !important;
+	}
+	/* 変な余白消した */
+	.pageIconSpacer {
+		display: none;
+	}
+	/*インタビューページの余白*/
+	.page_id-38f47a35feb949e2aa0d34ac087228e0 {
+		padding: 0 10px;
+	}
+	/*support~文の中央よせ*/
+	#block-561c3b9c859a4838a68fc2555de82108 {
+		text-align: center;
+		padding-left: 0;
+	}
+}
+/*画像保存対策*/
+
+/*img {*/
+
+/*    pointer-events: none;*/
+
+/*}*/

@@ -1,0 +1,23 @@
+html {
+  font-size: 20px;
+}
+
+.wrapper {
+  color: #666;
+  text-align: center;
+}
+.wrapper__title {
+  font-size: 1rem;
+}
+.wrapper .wrapper__button--round {
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 1.6rem;
+  font-size: 2rem;
+  color: #FFF;
+  background: linear-gradient(90deg, #B78D4A 0%, #D4BB92 100%);
+  display: inline-block;
+}
+.wrapper .wrapper__button:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=wrapper.css.map */
