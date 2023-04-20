@@ -1,0 +1,340 @@
+::marker{
+    list-style-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/410f5e7b-d707-4b91-9851-b174d223340f/2e95cfa56a5717c9d5d95558abcbf86f.svg);
+}
+
+.titleSection{
+    display:none;
+}
+
+.notion-h1{
+    margin-top:5px;
+}
+#block-116d5fd21325472990ccc586e97d66fc{
+    display: flex;
+    justify-content: center;
+}
+
+.contents{
+    max-width: 800px;
+}
+
+/*topへ戻るボタン*/
+/*.dli-chevron-up {*/
+/*  display: inline-block;*/
+/*  vertical-align: middle;*/
+/*  color: #333;*/
+/*  line-height: 1;*/
+/*  width: 1.5em;*/
+/*  height: 1.5em;*/
+/*  border: 0.1em solid currentColor;*/
+/*  border-left: 0;*/
+/*  border-bottom: 0;*/
+/*  box-sizing: border-box;*/
+/*  transform: translateY(25%) rotate(-45deg);*/
+/*}*/
+
+/*#top-button{*/
+/*    position:fixed;*/
+/*    bottom:7em;*/
+/*    right:2em;*/
+/*    z-index:9;*/
+/*}*/
+
+/*アコーディオン設定*/
+
+.notion-toggle {
+    padding: 0px 2px;
+    border-top: 1px solid #6d94a2;
+    background-color: white;
+    border-bottom: 1px solid #6d94a2;
+    margin: -1px 0 0 0;
+}
+
+.notion-toggle > div{
+    margin: 0 1em;
+}
+
+.notion-toggle .notion-text{
+    font-size: 14px;
+    padding: 0;
+    margin: 0 1.4em;
+}
+
+summary {
+    list-style: block;
+}
+
+.notion-toggle > summary{
+    display: flex;
+    justify-content: start;
+}
+
+.notion-toggle > summary > b{
+    padding-right: 1em;
+}
+
+summary::webkit-details-marker {
+    display: none;
+}
+
+div > .notion-text > span {
+    font-size: 16px;
+}
+
+/* 見出しの設定 */
+summary {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    margin: 0px 0px;
+    /*border-top: 1px solid #6D94A2;*/
+    font-weight: bold;
+    color: #002255;
+    position: relative;
+}
+
+/* アイコン */
+summary::after {
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    margin-left: 6px;
+    right: 1em;
+    top: 40%;
+    flex-shrink: 0;
+    background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/ae3bbd94-7cfa-44ce-aa52-406d1a5676fd/3eb21762555e791f3c51573a57f43f99.png);
+    background-size: contain;
+    /*transform-origin: center 43%;*/
+    /*transition: transform 0.4s;*/
+}
+
+/* アイコンのスタイル */
+summary::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    /*background-color: #7050ff;*/
+}
+
+/* details.accordion div {
+    overflow: hidden;
+} */
+
+/* アコーディオン開閉のアニメーション設定 */
+details[open] summary::after {
+    animation: 0.4s open-animation linear;
+    background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/76bef4e0-d541-4bd1-9158-25ed7057cffe/ef40f907c14e2b977dea2694ae1525df.png);
+    background-size: contain;
+}
+
+details.close summary::after {
+    animation: 0.4s close-animation linear;
+    background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/ae3bbd94-7cfa-44ce-aa52-406d1a5676fd/3eb21762555e791f3c51573a57f43f99.png);
+    background-size: contain;
+}
+
+details[open] summary{
+    animation: 0.4s open-color linear;
+    background-color: #f7f7f7;
+}
+
+details.close summary{
+    animation: 0.4s close-color ease;
+    background-color: #ffffff;
+}
+
+@keyframes open-color {
+    0% {
+        background-color: #ffffff;
+    }
+
+    100% {
+        background-color: #f7f7f7;
+    }
+}
+
+@keyframes close-color {
+    0% {
+        background-color: #f7f7f7;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+
+}
+
+@keyframes open-animation {
+    0% {
+        background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/ae3bbd94-7cfa-44ce-aa52-406d1a5676fd/3eb21762555e791f3c51573a57f43f99.png);
+        background-size: contain;
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/76bef4e0-d541-4bd1-9158-25ed7057cffe/ef40f907c14e2b977dea2694ae1525df.png);
+        background-size: contain;
+        opacity: 1;
+    }
+}
+
+@keyframes close-animation {
+    0% {
+        background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/76bef4e0-d541-4bd1-9158-25ed7057cffe/ef40f907c14e2b977dea2694ae1525df.png);
+        background-size: contain;
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        background-image: url(https://s3.ap-northeast-1.amazonaws.com/wraptas-prod/yatoro-kikaku/ae3bbd94-7cfa-44ce-aa52-406d1a5676fd/3eb21762555e791f3c51573a57f43f99.png);
+        background-size: contain;
+        opacity: 1;
+    }
+}
+
+/*ボタンデザイン*/
+div#block-75bd2de9ad0d4a698a1095d8c94b9ae1 {
+    display: block;
+    text-align: center;
+}
+
+div#block-75bd2de9ad0d4a698a1095d8c94b9ae1 .notion-callout-text > span {
+    display: block;
+    font-weight: 700;
+    margin: 1em;
+}
+
+div#block-75bd2de9ad0d4a698a1095d8c94b9ae1 .notion-callout-text div{
+    display: flex;
+    justify-content: center;
+}
+
+a.wraptas-button.wraptas-button-red_background {
+    border-radius: 0;
+    margin: 0 8px;
+    box-sizing: border-box;
+    /*background: #333;*/
+    border: solid 2px #333;
+}
+
+a.wraptas-button.wraptas-button-red_background span::before {
+    clip-path: polygon(40% 10%, 40% 90%, 100% 50%);
+    background-color: #333;
+    bottom: 0;
+    content: "";
+    height: 1em;
+    margin: auto;
+    position: absolute;
+    right: 6px;
+    top: 0;
+    width: 1em;
+}
+
+/*wraptasボタンデザイン*/
+/* 箇条書きの部分　Hover時に大きくなる */
+.wraptas-button-red_background::before {
+  position: absolute;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  content: "";
+  /*background-color: #333;*/
+  border-radius: 50%;
+  left: 20%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.35s cubic-bezier(0.87, 0.24, 0.36, 1),
+    height 0.35s cubic-bezier(0.87, 0.24, 0.36, 1);
+  z-index: 1;
+  background:#f8f8f8;
+}
+/* 箇条書きのホバー時の大きさ */
+.wraptas-button-red_background:hover::before {
+  width: 400px;
+  height: 400px;
+  background:#333;
+}
+
+.wraptas-button-red_background:not(:hover)::before{
+      transition: width 0.35s,height 0.35s,background 0.5s;
+}
+/*Wraptas-buttonに初期設定でopacityが追加されていた*/
+.wraptas-button-red_background:hover{
+    opacity: 1.0;
+}
+/* 文字のHover */
+.wraptas-button-red_background span:hover {
+  color: white; /*文字色の変化*/
+  z-index: 2; /*背景の上に移動*/
+  transition: 0.2s;
+}
+/* テキストのあたり判定とレイアウト */
+.wraptas-button-red_background span{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  border-radius: 42px; /*テキストボックスのあたり判定をボタンと同じに*/
+  display: flex;
+  align-items: center;
+  justify-content: center; /*中央寄せ*/
+  z-index: 1;
+}
+/*ボタンレイアウト*/
+.wraptas-button-red_background {
+  padding:0px;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 42px;
+  display: inline-flex;
+  height: 100%;
+  justify-content: center;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  position: relative;
+  transition: color 0.2s 0.2s;
+  width: 200px;
+  z-index: 1;
+  margin:0px;
+}
+
+/*スマホ版表示*/
+@media only screen and (max-width:700px) {
+    div#block-75bd2de9ad0d4a698a1095d8c94b9ae1 .notion-callout-text div {
+        display: block;
+        margin: 1em 0;
+        text-align: -webkit-center;
+    }
+    
+    .notion-blank{
+        width: 90%;
+    }
+    
+    .notion-row{
+        width: 90%;
+    }
+}
+
+.notion-callout > .notion-callout-text > span{
+    font-size: 20px;
+}
+
+.notion-callout > .notion-callout-text > b > span{
+    font-size: 20px;
+}
+
+/*ページ内リンクのスクロールアニメーション*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+} 

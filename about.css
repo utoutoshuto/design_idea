@@ -1,0 +1,254 @@
+/*スライドショーとComing soonを非表示*/
+.notion-callout{
+    display:none; /*display:noneを削除するともしくはコンテンツをコールアウトから取り出すと表示されるようになります。*/
+}
+
+.titleSection__contentsWrapper{
+    display: none;
+}
+
+/* 画像とSERVICESとかの間の余白 */
+#block-0c14fc70e63e408fac6195f13cd48b8d{
+    padding-left:0px;
+    padding-right:0px;
+    text-align: left;
+}
+#block-1a7aec3925be469badad8aa39a8db23c{
+    padding-left:0px;
+    padding-right:0px;
+    text-align: left;
+}
+#block-c4c6dc4c8c9748c1a6e5a8f79cb13c2c .notion-text{
+    padding-left:0px;
+    padding-right:0px;
+    text-align: left;
+}
+
+@media screen and (min-width: 641px){
+  #block-c8a419a02c034081b21b868a6c04c113 {
+    margin-left: 10em;
+  }
+  #block-78832fb845744ffd92dec7ffb1d85dab {
+    margin-left: 30px;
+  }
+}
+
+/* 社員インタビューの[すべてをみる]ボタン中央寄せ */
+#block-62337aa317fe4bdcbcbfba1bc151bdb9 {
+    margin: auto;
+}
+
+
+/*Positionのレイアウト調整*/
+.notion-spacer{
+    display: none;
+}
+#block-0b0fe492ddf640cd9c5f28c5ef80c5cf{
+    padding:0px;
+}
+#block-11c4b5872a0a40d28b667e562aabf8a2{
+    width:50%;
+}
+.coverImage{
+    height: 40vh;
+}
+
+    .notion-h2,#block-bd954a142a8d470195734c867e993ebd,#block-0c32fbdb5cad41338dcabe66d5112e58,#block-c466e99e5fea484ba40f16548669f23e{
+        text-align: center;
+        font-family: "メイリオ" ;
+        font-weight: 900;
+    }
+    .notion-h2{
+        font-size: 30px;
+        color:var(--title-black);
+    }
+    #block-bd954a142a8d470195734c867e993ebd,#block-0c32fbdb5cad41338dcabe66d5112e58,#block-c466e99e5fea484ba40f16548669f23e{
+        color:var(--yatoro-blue);
+        font-size: 24px;
+    }
+    
+    /*h3前の側線*/
+    .notion-h3:before {
+    background-color:var(--yatoro-yellow) ; /* 線色 */
+    border-radius: 5px; /* 線幅の半分 */
+    content: "";
+    display: inline-block;
+    height: 50px; /* 線の長さ */
+    margin-right: 20px; /* 線右の余白 */
+    vertical-align: middle;
+    width: 5px; /* 線幅 */
+}
+/*スライド*/
+#block-70d0d39c1ef948fd8f06a6ababb137db{
+    padding: 5%;
+}
+
+/**/
+/*flexboxの配置*/
+  .contentsWrapperCardItem {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .contentsCardItem {
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .cardHeader{
+    display: flex;
+  flex-wrap: wrap;
+  }
+  .articleCard {
+    background-color: #fff;
+    color: #212121;
+  }
+  .cardTitleText {
+    padding: 1rem 1.5rem 0;
+    font-size: 1.6rem;
+    order: 1;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid 3px black;
+  }
+  .cardThumbnail{
+  margin: 0;
+  order: 0;
+}
+  .cardImageContent{
+    width: 100%;
+  }
+  .cardBody{
+    padding: 0 1.5rem;
+  }
+  .cardText{
+    font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  }
+  /*ギャラリービューの設定*/
+  /*ギャラリービューの表示量制限*/
+.notion-collection-card:nth-child(n+4).show {
+    display: block;
+    transition: 1.0s;
+}
+.notion-collection-card:nth-child(n+4){
+    display: none;
+    transition: 1.0s;
+}
+
+/*検索窓の消去*/
+.notion-collection-header{
+    display: none;
+}
+  
+  /*ボタンデザイン*/
+      .triangle-button{
+        background-color: black;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 0 #00695C; */
+        color: #FFF;
+        padding: 8px;
+        text-decoration: none;
+        display: block;
+        max-width: 300px;
+        margin: 20px auto;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        transition: 0.5s;
+        letter-spacing: 2px;
+    }
+    .triangle-button::after{
+        content:"";
+        display: inline-block;
+        border-style: solid;
+        border-width:8px 0 8px 12px;
+        border-color: transparent transparent transparent #FFF;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+/*ページ内リンク用*/
+   .fixedItemPageLink {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    list-style: none;
+    right: 0;
+    bottom: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(90deg);
+    padding-bottom: 20%;
+  }
+  .fixedItemPageLink li {
+    font-size: 30px;
+    margin-right: 40px;
+  }
+  .fixedItemPageLink a{
+    
+    color:gray;
+    transition: .3s;
+    text-decoration: none;
+  }
+  .fixedItemPageLink a:hover{
+    opacity: 0.7;
+  }
+  
+  .page-about__yatoro .notion-h2{
+      padding-top: 1.5em;
+  }
+  
+  .notion-h1 > span{
+      white-space: nowrap;
+  }
+  
+/*Position のボタンのレイアウト調整*/
+@media screen and (min-width:601px){
+    #block-4c5b58e258f04fc19061d481ec185512 .notion-column{
+        width: 50%!important; /*.styleにwraptas側で指定されているためimportant必須*/
+    }
+}
+@media screen and (max-width:600px){
+    #block-4c5b58e258f04fc19061d481ec185512 .notion-column{
+        width: 100%!important; /*.styleにwraptas側で指定されているためimportant必須*/
+    }
+}
+
+#block-4c5b58e258f04fc19061d481ec185512 .wraptas-button-wrapper{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#block-271607f2791f4ed79cf6e71805d4ce3c .wraptas-button-wrapper{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#block-1ee970ed94ed4797a761f92688c35b6b, #block-d08f30fe28004975812ea3c6248ef159{
+    margin-top:16px;
+}
+
+/* Aboutのページのボタンのレイアウト */
+#block-4c5b58e258f04fc19061d481ec185512 .notion-column{
+    padding:16px 0px 0px 0px;    
+}
+
+/*会社情報のボタンのレイアウト*/
+#block-97fc7858d60c4a85b814367be37626ea{
+    margin-right: auto;
+    margin-left: auto;
+}
+@media screen and (mas-width: 640px) {
+    .notion-column .notion-text {
+  font-size: 4.1vmin
+}
+}
